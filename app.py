@@ -4,6 +4,8 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import seaborn as sns
+import warnings
+warnings.filterwarnings('ignore')
 import google.generativeai as genai
 import PIL.Image
 import io
@@ -118,7 +120,7 @@ if uploaded_file is not None:
         try:
             response = model.generate_content([
                 """Berdasarkan hasil analisis plot di atas, insight apa yang dapat diperoleh dari pola yang terlihat dan hubungan antar variabel? 
-                Berikan rekomendasi tindakan yang dapat diambil serta langkah-langkah selanjutnya berdasarkan temuan tersebut.:""",
+                Berikan rekomendasi tindakan yang dapat diambil serta langkah-langkah selanjutnya berdasarkan temuan tersebut. Buatkan penjelasannya dalam bahasa indonesia:""",
                 img
             ])
             response.resolve()
@@ -150,7 +152,7 @@ if uploaded_file is not None:
         try:
             response = model.generate_content([
                 """Berdasarkan hasil analisis plot di atas, insight apa yang dapat diperoleh dari pola yang terlihat dan hubungan antar variabel? 
-                Berikan rekomendasi tindakan yang dapat diambil serta langkah-langkah selanjutnya berdasarkan temuan tersebut.:""",
+                Berikan rekomendasi tindakan yang dapat diambil serta langkah-langkah selanjutnya berdasarkan temuan tersebut. Buatkan penjelasannya dalam bahasa indonesia:""",
                 img
             ])
             response.resolve()
@@ -202,7 +204,7 @@ if uploaded_file is not None:
         try:
             response = model.generate_content([
                 """Berdasarkan hasil analisis plot di atas, insight apa yang dapat diperoleh dari pola yang terlihat dan hubungan antar variabel? 
-                Berikan rekomendasi tindakan yang dapat diambil serta langkah-langkah selanjutnya berdasarkan temuan tersebut.:""",
+                Berikan rekomendasi tindakan yang dapat diambil serta langkah-langkah selanjutnya berdasarkan temuan tersebut. Buatkan penjelasannya dalam bahasa indonesia:""",
                 img
             ])
             response.resolve()
